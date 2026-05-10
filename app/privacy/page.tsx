@@ -1,0 +1,4 @@
+import { Section } from "@/components/ui/Section";
+import { createMetadata } from "@/lib/seo";
+export const metadata = createMetadata({ title: "Privacy Policy", description: "Privacy policy for Mia’s Cleaning Service.", path: "/privacy" });
+export default function PrivacyPage(){return <Section><div className="mx-auto max-w-3xl"><h1 className="text-4xl font-black">Privacy Policy</h1><p className="mt-6 leading-8 text-charcoal/70">Mia’s Cleaning Service collects contact and booking information only to respond to inquiries, schedule services, and improve customer care. We do not sell personal information. Form submissions may be processed by the hosting, email, or booking tools you connect after deployment.</p><p className="mt-4 leading-8 text-charcoal/70">Clients may request correction or deletion of their information by contacting the business email listed on this site.</p></div></Section>}

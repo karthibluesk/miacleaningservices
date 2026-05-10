@@ -1,0 +1,74 @@
+{
+  "tiers": [
+    {
+      "name": "Essential Refresh",
+      "price": "From $120",
+      "description": "Best for routine upkeep and smaller homes.",
+      "features": [
+        "Kitchen and bathrooms",
+        "Dusting and floors",
+        "Trash removal",
+        "Great for weekly or biweekly visits"
+      ]
+    },
+    {
+      "name": "Signature Deep Clean",
+      "price": "From $240",
+      "description": "A detailed top-to-bottom reset for first-time or seasonal cleaning.",
+      "features": [
+        "Detailed surfaces and baseboards",
+        "Kitchen degreasing",
+        "Bathroom detail cleaning",
+        "Priority checklist review"
+      ],
+      "highlighted": true
+    },
+    {
+      "name": "Move-In / Move-Out",
+      "price": "From $280",
+      "description": "For empty homes, apartments, and rental turnover.",
+      "features": [
+        "Inside cabinets and drawers",
+        "Closets and fixtures",
+        "Bathrooms and kitchen",
+        "Add appliance interiors"
+      ]
+    }
+  ],
+  "discounts": [
+    {
+      "label": "Weekly",
+      "value": "15% off"
+    },
+    {
+      "label": "Biweekly",
+      "value": "10% off"
+    },
+    {
+      "label": "Monthly",
+      "value": "5% off"
+    }
+  ],
+  "addons": [
+    {
+      "name": "Inside oven",
+      "price": "$35"
+    },
+    {
+      "name": "Inside refrigerator",
+      "price": "$45"
+    },
+    {
+      "name": "Interior windows",
+      "price": "$60+"
+    },
+    {
+      "name": "Laundry folding",
+      "price": "$25/load"
+    },
+    {
+      "name": "Pet hair detail",
+      "price": "$30+"
+    }
+  ]
+}

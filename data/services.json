@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "standard-cleaning",
+    "title": "Standard Cleaning",
+    "summary": "A reliable weekly, biweekly, or monthly refresh for a consistently clean home.",
+    "description": "Ideal for maintained homes that need routine dusting, kitchens, bathrooms, floors, and touch-point cleaning.",
+    "icon": "Sparkles",
+    "duration": "2\u20134 hours",
+    "startingAt": 120,
+    "includes": [
+      "Dust accessible surfaces",
+      "Clean kitchen counters, sink, stovetop, and appliance exteriors",
+      "Sanitize bathrooms",
+      "Vacuum and mop floors",
+      "Empty trash and tidy common areas"
+    ],
+    "faqs": [
+      {
+        "question": "Can I set recurring visits?",
+        "answer": "Yes. Weekly, biweekly, and monthly plans are available with recurring discounts."
+      }
+    ]
+  },
+  {
+    "slug": "deep-cleaning",
+    "title": "Deep Cleaning",
+    "summary": "A detailed reset for homes that need extra care from top to bottom.",
+    "description": "Best for first-time clients, seasonal resets, post-event cleanup, and homes needing detailed attention.",
+    "icon": "HeartHandshake",
+    "duration": "4\u20137 hours",
+    "startingAt": 240,
+    "includes": [
+      "Detailed dusting including baseboards and door frames",
+      "Hand-clean cabinet fronts and fixtures",
+      "Scrub showers, tubs, tile, and grout touch-ups",
+      "Degrease kitchen surfaces",
+      "Vacuum edges and mop hard floors"
+    ],
+    "faqs": [
+      {
+        "question": "Should I book a deep clean first?",
+        "answer": "A deep clean is recommended for first visits so recurring maintenance starts from a refreshed baseline."
+      }
+    ]
+  },
+  {
+    "slug": "move-in-move-out",
+    "title": "Move-In / Move-Out",
+    "summary": "A focused empty-home cleaning for transitions, landlords, sellers, and renters.",
+    "description": "Designed for vacant or mostly vacant spaces, with extra attention to cabinets, appliances, closets, and bathrooms.",
+    "icon": "Home",
+    "duration": "4\u20138 hours",
+    "startingAt": 280,
+    "includes": [
+      "Clean inside empty cabinets and drawers",
+      "Clean appliance interiors when selected",
+      "Sanitize bathrooms and kitchen",
+      "Dust fixtures, ledges, and baseboards",
+      "Vacuum and mop all rooms"
+    ],
+    "faqs": [
+      {
+        "question": "Do utilities need to be active?",
+        "answer": "Yes. Water and electricity must be available for the best results."
+      }
+    ]
+  },
+  {
+    "slug": "eco-friendly-cleaning",
+    "title": "Eco-Friendly Cleaning",
+    "summary": "A gentler clean using family-conscious, low-fragrance product options.",
+    "description": "Great for households that prefer mindful products, pet-friendly options, and a softer scent profile.",
+    "icon": "Leaf",
+    "duration": "2\u20135 hours",
+    "startingAt": 140,
+    "includes": [
+      "Low-fragrance product options",
+      "Microfiber dusting",
+      "Bathroom and kitchen sanitizing",
+      "Floor cleaning",
+      "Trash removal and reset"
+    ],
+    "faqs": [
+      {
+        "question": "Can I provide my own products?",
+        "answer": "Yes. Mia\u2019s team can use approved client-provided products when instructions are clear."
+      }
+    ]
+  }
+]

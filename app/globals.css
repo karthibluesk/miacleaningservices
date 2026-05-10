@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-ivory: #FFF8EF;
+  --color-cream: #FFFDF8;
+  --color-teal: #7BCDC8;
+  --color-sky: #BFE5F6;
+  --color-mint: #DDF6EC;
+  --color-sage: #89A99B;
+  --color-pink: #EC5E95;
+  --color-blush: #FFEAF3;
+  --color-rose: #F8A9C8;
+  --color-charcoal: #273238;
+  --color-soft: #F4F7F5;
+  --shadow-glow: 0 20px 60px rgba(236, 94, 149, 0.20);
+}
+
+
+:root { color-scheme: light; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #fffdf8;
+  color: #273238;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a { text-decoration: none; }
+
+::selection { background: #ffeaf3; color: #273238; }
+
+.prose-clean h2 { font-size: 1.8rem; line-height: 1.2; margin-top: 2rem; margin-bottom: 0.75rem; font-weight: 800; }
+.prose-clean h3 { font-size: 1.25rem; margin-top: 1.5rem; font-weight: 750; }
+.prose-clean p { margin: 1rem 0; line-height: 1.8; color: #4a565b; }
+.prose-clean ul { margin: 1rem 0; padding-left: 1.2rem; }
+.prose-clean li { margin: 0.45rem 0; color: #4a565b; }
+
+.focus-ring:focus-visible { outline: 3px solid #ec5e95; outline-offset: 3px; }

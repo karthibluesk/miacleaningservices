@@ -1,0 +1,4 @@
+import { Section } from "@/components/ui/Section";
+import { createMetadata } from "@/lib/seo";
+export const metadata = createMetadata({ title: "Terms of Service", description: "Terms for using Mia’s Cleaning Service website.", path: "/terms" });
+export default function TermsPage(){return <Section><div className="mx-auto max-w-3xl"><h1 className="text-4xl font-black">Terms of Service</h1><p className="mt-6 leading-8 text-charcoal/70">Website information is provided for general service guidance. Booking requests are not final until confirmed by Mia’s Cleaning Service. Final pricing may vary based on home size, condition, requested scope, and add-ons.</p><p className="mt-4 leading-8 text-charcoal/70">Clients are responsible for safe access, active utilities, and disclosure of special conditions before service.</p></div></Section>}

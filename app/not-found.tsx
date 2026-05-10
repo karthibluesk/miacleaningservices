@@ -1,0 +1,2 @@
+import { Button } from "@/components/ui/Button";
+export default function NotFound(){return <div className="mx-auto max-w-2xl px-4 py-24 text-center"><p className="text-sm font-bold uppercase tracking-[0.2em] text-sage">404</p><h1 className="mt-3 text-4xl font-black">This page has been swept away.</h1><p className="mt-4 text-charcoal/70">The page you are looking for does not exist.</p><Button href="/" className="mt-6">Return Home</Button></div>}

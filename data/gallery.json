@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Bright kitchen reset",
+    "before": "/images/gallery/kitchen-before.svg",
+    "after": "/images/gallery/kitchen-after.svg",
+    "alt": "Before and after kitchen cleaning"
+  },
+  {
+    "title": "Spa-like bathroom polish",
+    "before": "/images/gallery/bath-before.svg",
+    "after": "/images/gallery/bath-after.svg",
+    "alt": "Before and after bathroom cleaning"
+  },
+  {
+    "title": "Living room refresh",
+    "before": "/images/gallery/living-before.svg",
+    "after": "/images/gallery/living-after.svg",
+    "alt": "Before and after living room cleaning"
+  }
+]
