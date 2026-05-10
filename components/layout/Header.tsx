@@ -27,7 +27,7 @@ export function Header() {
           </span>
         </Link>
         <nav aria-label="Primary navigation" className="hidden items-center gap-7 md:flex">
-          {siteConfig.nav.map((item) => <Link key={item.href} href={item.href} className="focus-ring rounded-md text-sm font-semibold text-charcoal/75 hover:text-charcoal">{item.label}</Link>)}
+          {siteConfig.nav.map((item) => <Link key={item.href} href={item.href as any} className="focus-ring rounded-md text-sm font-semibold text-charcoal/75 hover:text-charcoal">{item.label}</Link>)}
         </nav>
         <div className="hidden md:block"><Button href="/booking">Book a Cleaning</Button></div>
         <button aria-label={open ? "Close menu" : "Open menu"} className="focus-ring rounded-full p-2 md:hidden" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
@@ -35,7 +35,7 @@ export function Header() {
       {open && (
         <div className="border-t border-teal/15 bg-cream px-4 py-4 md:hidden">
           <nav className="grid gap-2" aria-label="Mobile navigation">
-            {siteConfig.nav.map((item) => <Link key={item.href} onClick={() => setOpen(false)} href={item.href} className="rounded-xl px-3 py-3 font-semibold hover:bg-blush">{item.label}</Link>)}
+            {siteConfig.nav.map((item) => <Link key={item.href} onClick={() => setOpen(false)} href={item.href as any} className="rounded-xl px-3 py-3 font-semibold hover:bg-blush">{item.label}</Link>)}
             <Button href="/booking" className="mt-2">Book a Cleaning</Button>
           </nav>
         </div>

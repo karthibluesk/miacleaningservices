@@ -18,6 +18,6 @@ export function Button({ href, children, variant = "primary", className, type = 
     variant === "ghost" && "text-charcoal hover:bg-blush",
     className
   );
-  if (href) return <Link className={classes} href={href}>{children}</Link>;
+  if (href) return <Link className={classes} href={href as any}>{children}</Link>;
   return <button className={classes} type={type} onClick={onClick}>{children}</button>;
 }

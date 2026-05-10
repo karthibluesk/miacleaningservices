@@ -20,7 +20,7 @@ export function Footer() {
         <div>
           <p className="font-bold">Explore</p>
           <div className="mt-3 grid gap-2 text-sm">
-            {siteConfig.nav.map((item) => <Link key={item.href} href={item.href} className="hover:underline">{item.label}</Link>)}
+            {siteConfig.nav.map((item) => <Link key={item.href} href={item.href as any} className="hover:underline">{item.label}</Link>)}
             <Link href="/faq">FAQ</Link>
           </div>
         </div>
