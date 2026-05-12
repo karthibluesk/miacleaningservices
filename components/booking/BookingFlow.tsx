@@ -25,6 +25,8 @@ const sizes = ["Studio / 1 bed", "2 bedrooms", "3 bedrooms", "4+ bedrooms"];
 export function BookingFlow() {
   const [step, setStep] = useState(0);
   const [done, setDone] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
   const [booking, setBooking] = useState<Booking>(initial);
   const selectedService = services.find((s) => s.slug === booking.service);
 
@@ -39,12 +41,53 @@ export function BookingFlow() {
     setBooking((b) => ({ ...b, addons: b.addons.includes(name) ? b.addons.filter((a) => a !== name) : [...b.addons, name] }));
   }
 
+  async function submitBooking() {
+    if (!valid) return;
+
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xrejjbgd", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `New booking request from ${booking.name}`,
+          service: selectedService?.title || booking.service,
+          size: booking.size,
+          date: booking.date,
+          time: booking.time,
+          addons: booking.addons.join(", ") || "None",
+          name: booking.name,
+          email: booking.email,
+          phone: booking.phone,
+          address: booking.address,
+          notes: booking.notes,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      setDone(true);
+    } catch (err) {
+      console.error(err);
+      setError("Sorry, your request could not be sent. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
   if (done) {
     return (
       <div className="mx-auto max-w-2xl rounded-3xl border border-teal/20 bg-white p-8 text-center shadow-glow">
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-sage">Request received</p>
         <h1 className="mt-3 text-3xl font-black">Thank you, {booking.name}.</h1>
-        <p className="mt-4 leading-8 text-charcoal/70">Your booking request has been captured in this demo flow. Connect this form to your preferred email, CRM, or booking provider when you deploy.</p>
+        <p className="mt-4 leading-8 text-charcoal/70">Your booking request has been sent. We will contact you soon to confirm the details.</p>
         <Button href="/" className="mt-6">Return Home</Button>
       </div>
     );
@@ -121,9 +164,11 @@ export function BookingFlow() {
           </div>
         )}
 
+        {error && <p className="mt-6 rounded-2xl bg-red-50 p-4 text-sm font-semibold text-red-700">{error}</p>}
+
         <div className="mt-8 flex justify-between gap-3">
           <Button variant="secondary" onClick={() => setStep(Math.max(0, step - 1))}>Back</Button>
-          {step < 3 ? <Button onClick={() => setStep(step + 1)} className={!valid ? "pointer-events-none opacity-50" : ""}>Continue</Button> : <Button onClick={() => valid && setDone(true)} className={!valid ? "pointer-events-none opacity-50" : ""}>Confirm Request</Button>}
+          {step < 3 ? <Button onClick={() => setStep(step + 1)} className={!valid ? "pointer-events-none opacity-50" : ""}>Continue</Button> : <Button onClick={submitBooking} className={!valid || submitting ? "pointer-events-none opacity-50" : ""}>{submitting ? "Sending..." : "Confirm Request"}</Button>}
         </div>
       </div>
 
